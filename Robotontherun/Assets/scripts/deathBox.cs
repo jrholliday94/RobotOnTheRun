@@ -1,6 +1,8 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class GetHurt : MonoBehaviour
+public class deathBox : MonoBehaviour
 {
     private GameObject thePlayer;
     private PlayerController playerScript;
@@ -13,9 +15,6 @@ public class GetHurt : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (!playerScript.damagedRecently)
-        {
-            playerScript.TakeDamage();
-        }
+        playerScript.Die();
     }
 }
