@@ -17,15 +17,15 @@ public class PlayerController : Physics
     // Take damage properties
     public bool damagedRecently = false; // Must be public to allow GetHurt script to take advantage
 
-    private readonly float immunityTime = 2.5f;  // seconds of immunity after taking damage
+    private readonly float immunityTime = 0.5f;  // seconds of immunity after taking damage
     private float timeCounter;
     
 
     // Stats
     public int currentHealth;
     public int maxHealth = 4;
-    public int damageScore = 50; // Amount of score to take on player damage
-    public float levelTime = 60;
+    public int damageScore = 25; // Amount of score to take on player damage
+    public float levelTime = 120;
 
 
     private int score;
