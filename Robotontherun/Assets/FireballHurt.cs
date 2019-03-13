@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class GetHurt : MonoBehaviour
+public class FireballHurt : MonoBehaviour
 {
     private GameObject thePlayer;
     private PlayerController playerScript;
@@ -10,12 +10,11 @@ public class GetHurt : MonoBehaviour
         thePlayer = GameObject.Find("Player");
         playerScript = thePlayer.GetComponent<PlayerController>();
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!playerScript.damagedRecently)
         {
-            Debug.Log("oof");
             playerScript.TakeDamage();
         }
     }
