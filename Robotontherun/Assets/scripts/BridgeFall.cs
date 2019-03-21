@@ -11,7 +11,7 @@ public class BridgeFall : MonoBehaviour
         
         if(falling == true)
         {
-            goDown.Set(transform.position.x, -10);
+            goDown.Set(transform.position.x, -100);
             this.transform.position = Vector2.MoveTowards(transform.position, goDown, .1f);
         }
 

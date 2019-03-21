@@ -15,7 +15,6 @@ public class GetHurt : MonoBehaviour
     {
         if (!playerScript.damagedRecently)
         {
-            Debug.Log("oof");
             playerScript.TakeDamage();
         }
     }
