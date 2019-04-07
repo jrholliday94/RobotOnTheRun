@@ -1,5 +1,6 @@
 ﻿// Taken from Unity 2d tutorial: https://unity3d.com/learn/tutorials/topics/2d-game-creation/horizontal-movement?playlist=17093
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerController : Physics
@@ -7,6 +8,9 @@ public class PlayerController : Physics
     // Movement properties
     public float maxSpeed = 7;
     public float jumpTakeOffSpeed = 7;
+        //added for double jump
+    private bool SecondJumpAvailabel = true;
+        //end add for double jump
 
     // References
     private SpriteRenderer spriteRenderer;
@@ -20,7 +24,7 @@ public class PlayerController : Physics
     private readonly float immunityTime = 0.5f;  // seconds of immunity after taking damage
     private float timeCounter;
     
-
+    
     // Stats
     public int currentHealth;
     public int maxHealth = 4;
@@ -29,6 +33,15 @@ public class PlayerController : Physics
 
 
     private int score;
+
+         //Start code for double jump
+    
+    //Get Scene name properties
+    Scene CurrentScene;
+    string SceneName;
+
+        //End code for double jump
+
 
     // Use this for initialization
     void Awake()
@@ -39,6 +52,12 @@ public class PlayerController : Physics
 
     void Start()
     {
+        //Get Scene Name
+            //Start code for double jump
+        CurrentScene = SceneManager.GetActiveScene();
+        SceneName = CurrentScene.name;
+            //end code for double jump
+        
         // Start the game with max health.
         currentHealth = maxHealth;
         
@@ -90,7 +109,7 @@ public class PlayerController : Physics
         }
 
         // If player falls off map, restart level
-        if(transform.position.y < -15)
+        if(transform.position.y < -25)
         {
             Die();
         }
@@ -107,7 +126,7 @@ public class PlayerController : Physics
         if (Input.GetButtonDown("Jump") && grounded)
         {
             velocity.y = jumpTakeOffSpeed;
-
+            SecondJumpAvailabel = true;
         }
         else if (Input.GetButtonUp("Jump"))
         {
@@ -116,6 +135,24 @@ public class PlayerController : Physics
                 velocity.y = velocity.y * 0.5f;
             }
         }
+
+        //added for double jump
+        if (SceneName == "Level 3")
+        {
+            if (Input.GetButtonDown("Jump") && !grounded && SecondJumpAvailabel == true)
+            {
+                velocity.y = jumpTakeOffSpeed;
+                SecondJumpAvailabel = false;
+            }
+            else if (Input.GetButtonUp("Jump"))
+            {
+                if (velocity.y > 0)
+                {
+                    velocity.y = velocity.y * 0.5f;
+                }
+            }
+        }
+        // end added for double jump
 
         bool flipSprite = false;
 
