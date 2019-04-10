@@ -1479,7 +1479,7 @@ PrefabInstance:
     - target: {fileID: 1883167565808624769, guid: 7bea52f1c1e498849895d54c407a12c1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.54
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1883167565808624769, guid: 7bea52f1c1e498849895d54c407a12c1,
         type: 3}
@@ -1543,6 +1543,18 @@ PrefabInstance:
       objectReference: {fileID: 350986505}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bea52f1c1e498849895d54c407a12c1, type: 3}
+--- !u!114 &1367568795 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1883167565808624768, guid: 7bea52f1c1e498849895d54c407a12c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1367568794}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 166ff272175b9394692cc58bfecb7f27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1476559185
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1674,6 +1686,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RenderMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2668866607582638546, guid: dd8a5c6e030c60548bf60ffa3eac91bc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1367568795}
+    - target: {fileID: 2668866607582638546, guid: dd8a5c6e030c60548bf60ffa3eac91bc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2668866607804400388, guid: dd8a5c6e030c60548bf60ffa3eac91bc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1367568795}
+    - target: {fileID: 2668866607804400388, guid: dd8a5c6e030c60548bf60ffa3eac91bc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Resume
+      objectReference: {fileID: 0}
+    - target: {fileID: 2668866608957369757, guid: dd8a5c6e030c60548bf60ffa3eac91bc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1367568795}
+    - target: {fileID: 2668866608957369757, guid: dd8a5c6e030c60548bf60ffa3eac91bc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Quit
+      objectReference: {fileID: 0}
+    - target: {fileID: 2668866609127406344, guid: dd8a5c6e030c60548bf60ffa3eac91bc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1367568795}
+    - target: {fileID: 2668866609127406344, guid: dd8a5c6e030c60548bf60ffa3eac91bc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Restart
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd8a5c6e030c60548bf60ffa3eac91bc, type: 3}
@@ -2013,15 +2065,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1568107649}
     m_Modifications:
+    - target: {fileID: 1565300762918112258, guid: e4d2f03aa86791f4f81b2b0ae4b58af5,
+        type: 3}
+      propertyPath: m_Name
+      value: BoxWithText
+      objectReference: {fileID: 0}
     - target: {fileID: 1565300762918112257, guid: e4d2f03aa86791f4f81b2b0ae4b58af5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.11
+      value: -3.62
       objectReference: {fileID: 0}
     - target: {fileID: 1565300762918112257, guid: e4d2f03aa86791f4f81b2b0ae4b58af5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.67
+      value: 3.59
       objectReference: {fileID: 0}
     - target: {fileID: 1565300762918112257, guid: e4d2f03aa86791f4f81b2b0ae4b58af5,
         type: 3}
@@ -2067,11 +2124,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1565300762918112258, guid: e4d2f03aa86791f4f81b2b0ae4b58af5,
-        type: 3}
-      propertyPath: m_Name
-      value: BoxWithText
       objectReference: {fileID: 0}
     - target: {fileID: 729607605104327769, guid: e4d2f03aa86791f4f81b2b0ae4b58af5,
         type: 3}

@@ -1,12 +1,15 @@
 ﻿// Taken from Unity 2d tutorial: https://unity3d.com/learn/tutorials/topics/2d-game-creation/horizontal-movement?playlist=17093
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : Physics
 {
     // Movement properties
     public float maxSpeed = 7;
     public float jumpTakeOffSpeed = 7;
+    // Added for double jump
+    private bool SecondJumpAvailable = true;
 
     // References
     private SpriteRenderer spriteRenderer;
@@ -29,6 +32,10 @@ public class PlayerController : Physics
 
 
     private int score;
+    
+    //Get Scene name properties for double jump.
+    Scene CurrentScene;
+    string SceneName;
 
     // Use this for initialization
     void Awake()
@@ -41,7 +48,11 @@ public class PlayerController : Physics
     {
         // Start the game with max health.
         currentHealth = maxHealth;
-        
+
+        // Get information for double jump.
+        CurrentScene = SceneManager.GetActiveScene();
+        SceneName = CurrentScene.name;
+
         //Setting scoreboard
         score = 0;
         scoreText.text = "Score: " + score.ToString();
@@ -107,13 +118,30 @@ public class PlayerController : Physics
         if (Input.GetButtonDown("Jump") && grounded)
         {
             velocity.y = jumpTakeOffSpeed;
-
+            SecondJumpAvailable = true;
         }
         else if (Input.GetButtonUp("Jump"))
         {
             if (velocity.y > 0)
             {
                 velocity.y = velocity.y * 0.5f;
+            }
+        }
+
+        // Allows the player to double jump on specific scenes.
+        if (SceneName == "Level 3" || SceneName == "Level 4")
+        {
+            if (Input.GetButtonDown("Jump") && !grounded && SecondJumpAvailable == true)
+            {
+                velocity.y = jumpTakeOffSpeed;
+                SecondJumpAvailable = false;
+            }
+            else if (Input.GetButtonUp("Jump"))
+            {
+                if (velocity.y > 0)
+                {
+                    velocity.y = velocity.y * 0.5f;
+                }
             }
         }
 
