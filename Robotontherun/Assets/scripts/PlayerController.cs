@@ -61,6 +61,8 @@ public class PlayerController : Physics
     // Allows the player to 'die'.
     public void Die()
     {
+
+
         // If you die restart the game.
         Application.LoadLevel(Application.loadedLevel);
     }
