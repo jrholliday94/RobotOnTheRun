@@ -31,11 +31,5 @@ public class falling_ice : MonoBehaviour
 
             Destroy(item, LiveTime);
         }
-       
-       
-
     }
-
-   
-
 }

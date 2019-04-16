@@ -15,7 +15,6 @@ public class Upright_Ice_Kill : MonoBehaviour
     {
         if (!playerScript.damagedRecently && collision.gameObject.name == "Player")
         {
-
             playerScript.TakeDamage();
         }
     }
