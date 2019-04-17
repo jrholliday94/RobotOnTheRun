@@ -99,13 +99,13 @@ public class PlayerController : Physics
         {
             Die();
         }
-
+        /*
         // If player falls off map, restart level
         if(transform.position.y < -15)
         {
             Die();
         }
-            
+        */  
     }
 
     protected override void ComputeVelocity()

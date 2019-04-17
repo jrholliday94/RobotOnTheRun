@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Upright_Ice_Kill : MonoBehaviour
 {
@@ -17,7 +15,6 @@ public class Upright_Ice_Kill : MonoBehaviour
     {
         if (!playerScript.damagedRecently && collision.gameObject.name == "Player")
         {
-
             playerScript.TakeDamage();
         }
     }

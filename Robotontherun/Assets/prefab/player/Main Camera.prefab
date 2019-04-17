@@ -124,9 +124,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealthSprites:
-  - {fileID: 21300000, guid: 48d38d279de905a4498ab8616164e2ec, type: 3}
-  - {fileID: 21300002, guid: 48d38d279de905a4498ab8616164e2ec, type: 3}
-  - {fileID: 21300004, guid: 48d38d279de905a4498ab8616164e2ec, type: 3}
-  - {fileID: 21300006, guid: 48d38d279de905a4498ab8616164e2ec, type: 3}
-  - {fileID: 21300008, guid: 48d38d279de905a4498ab8616164e2ec, type: 3}
+  - {fileID: 21300010, guid: c25d2955ea314f44985ddc3c6581c63b, type: 3}
+  - {fileID: 21300008, guid: c25d2955ea314f44985ddc3c6581c63b, type: 3}
+  - {fileID: 21300006, guid: c25d2955ea314f44985ddc3c6581c63b, type: 3}
+  - {fileID: 21300004, guid: c25d2955ea314f44985ddc3c6581c63b, type: 3}
+  - {fileID: 21300002, guid: c25d2955ea314f44985ddc3c6581c63b, type: 3}
   HeartUI: {fileID: 0}
