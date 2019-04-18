@@ -20,7 +20,7 @@ PrefabInstance:
     - target: {fileID: 2140468904312103317, guid: ec4e4ca3b38e2ed49869cb2992af17c0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.815
+      value: 7.722
       objectReference: {fileID: 0}
     - target: {fileID: 2140468904312103317, guid: ec4e4ca3b38e2ed49869cb2992af17c0,
         type: 3}
@@ -82,6 +82,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4806821625800424807, guid: ec4e4ca3b38e2ed49869cb2992af17c0,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec4e4ca3b38e2ed49869cb2992af17c0, type: 3}
 --- !u!1001 &5214919521496758214
@@ -94,7 +99,7 @@ PrefabInstance:
     - target: {fileID: 34963921300969253, guid: d7fcab145ea39784e85b5abffc4f0784,
         type: 3}
       propertyPath: m_Name
-      value: Jumping_pole
+      value: Jumping_Pole_With_Ice
       objectReference: {fileID: 0}
     - target: {fileID: 4047942772444897474, guid: d7fcab145ea39784e85b5abffc4f0784,
         type: 3}
@@ -161,15 +166,15 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.9100002
       objectReference: {fileID: 0}
-    - target: {fileID: 3856962299908982616, guid: d7fcab145ea39784e85b5abffc4f0784,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.28
-      objectReference: {fileID: 0}
     - target: {fileID: 8526411633149959956, guid: d7fcab145ea39784e85b5abffc4f0784,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.41999978
+      objectReference: {fileID: 0}
+    - target: {fileID: 3856962299908982616, guid: d7fcab145ea39784e85b5abffc4f0784,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.28
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7fcab145ea39784e85b5abffc4f0784, type: 3}
