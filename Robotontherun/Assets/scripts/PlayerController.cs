@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using filewriter;
 
 public class PlayerController : Physics
 {
@@ -16,6 +17,9 @@ public class PlayerController : Physics
     private Animator animator;
     public Text scoreText;
     public Text timerText;
+
+    //added for score tracking
+    public ScoreNameToFile DataRecorder;
 
     // Take damage properties
     public bool damagedRecently = false; // Must be public to allow GetHurt script to take advantage
@@ -37,6 +41,9 @@ public class PlayerController : Physics
     Scene CurrentScene;
     string SceneName;
 
+    
+    
+
     // Use this for initialization
     void Awake()
     {
@@ -46,6 +53,9 @@ public class PlayerController : Physics
 
     void Start()
     {
+        // added for score tracking
+        DataRecorder = new ScoreNameToFile();
+
         // Start the game with max health.
         currentHealth = maxHealth;
 
@@ -54,13 +64,42 @@ public class PlayerController : Physics
         SceneName = CurrentScene.name;
 
         //Setting scoreboard
-        score = 0;
-        scoreText.text = "Score: " + score.ToString();
+        //adjusted by to set score on new Scene
+               
+            if (SceneName == "Level 1")
+            {
+                score = 0;
+                Debug.Log("Set score property to 0");
+            }
+            else
+            {
+                int ReceivedScore;
+                int.TryParse(DataRecorder.GetScore(), out ReceivedScore);
+                score = ReceivedScore;
+                Debug.Log("Ran set property with no level 1 ReceivedScore is" + ReceivedScore.ToString());
+                Debug.Log("score property is :" + score.ToString());
+            }
+            Debug.Log("Score sent to screen is " + score.ToString());
+            scoreText.text = "Score: " + score.ToString();
+        Debug.Log("Start method is run");
+
+        //added to fix bug that always adds 200 points to score when you die on level 3 and 4
+        if (SceneName == "Level 3" || SceneName == "Level 4")
+        {
+            score = score - 200;
+        }
+        
+
     }
 
     // Allows the player to 'die'.
     public void Die()
     {
+        Debug.Log("Die method is run");
+        
+        
+        //record current score to data file
+        DataRecorder.UpdateScore(score.ToString());
         // If you die restart the game.
         Application.LoadLevel(Application.loadedLevel);
     }
@@ -105,7 +144,8 @@ public class PlayerController : Physics
         {
             Die();
         }
-        */  
+        */
+        Debug.Log(score.ToString());
     }
 
     protected override void ComputeVelocity()
@@ -175,6 +215,7 @@ public class PlayerController : Physics
             damagedRecently = true;
             score -= damageScore;
             scoreText.text = "Score: " + score.ToString();
+            Debug.Log("Take damage is run");
         }
     }
 
@@ -184,11 +225,19 @@ public class PlayerController : Physics
         {
             currentHealth++;
         }
+        Debug.Log("Take Heal is run");
     }
 
     public void AddScore(int scoreValue)
     {
         score += scoreValue;
         scoreText.text = "Score: " + score.ToString();
+        Debug.Log("Add score is run");
+    }
+
+    public void RecordScoreOnExit()
+    {
+        DataRecorder.UpdateScore(score.ToString());
+        Debug.Log("Ran RecordScoreonExit() method with score value of" + score.ToString());
     }
 }
