@@ -65,8 +65,14 @@ public class PlayerController : Physics
 
         //Setting scoreboard
         //adjusted by to set score on new Scene
-               
-            if (SceneName == "Level 1")
+
+        //added to fix bug that always adds 200 points to score when you die on level 3 and 4
+        if (SceneName == "Level 3" || SceneName == "Level 4")
+        {
+            score = score - 200;
+        }
+
+        if (SceneName == "Level 1")
             {
                 score = 0;
                 Debug.Log("Set score property to 0");
@@ -83,11 +89,7 @@ public class PlayerController : Physics
             scoreText.text = "Score: " + score.ToString();
         Debug.Log("Start method is run");
 
-        //added to fix bug that always adds 200 points to score when you die on level 3 and 4
-        if (SceneName == "Level 3" || SceneName == "Level 4")
-        {
-            score = score - 200;
-        }
+        
         
 
     }
@@ -99,7 +101,7 @@ public class PlayerController : Physics
         
         
         //record current score to data file
-        DataRecorder.UpdateScore(score.ToString());
+      //  DataRecorder.UpdateScore(score.ToString());
         // If you die restart the game.
         Application.LoadLevel(Application.loadedLevel);
     }

@@ -16,8 +16,19 @@ public class GetLeaderBoard : MonoBehaviour
 
     IEnumerator GetBoard()
     {
-        UnityWebRequest result = UnityWebRequest.Get("http://cis174-imtibe-web.azurewebsites.net/api/v1/highscore");
+        UnityWebRequest result = UnityWebRequest.Get("http://cis174-bfrederickson-website.azurewebsites.net/API/v1/highscores/get");
         yield return result.SendWebRequest();
+
+
+        var data = result.downloadHandler.text;
+
+        
+        for(int x=0; x < data.Count(); x++)
+        {
+            var insidedata = data[x];
+            Debug.Log(data[x]);
+
+        }
 
         if (result.isNetworkError || result.isHttpError)
         {
