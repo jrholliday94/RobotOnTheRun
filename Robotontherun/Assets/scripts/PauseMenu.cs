@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using filewriter;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -53,6 +54,12 @@ public class PauseMenu : MonoBehaviour
 
     public void Quit()
     {
+        //removes data files from user comptuer
+        ScoreNameToFile DataRecorder = new ScoreNameToFile();
+        DataRecorder.DeletefileScore();
+        DataRecorder.DeleteUserFile();
+
+        //quits game
         Application.Quit();
     }
 }

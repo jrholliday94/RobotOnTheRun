@@ -67,30 +67,31 @@ public class PlayerController : Physics
         //adjusted by to set score on new Scene
 
         //added to fix bug that always adds 200 points to score when you die on level 3 and 4
-        if (SceneName == "Level 3" || SceneName == "Level 4")
-        {
-            score = score - 200;
-        }
+        //if (SceneName == "Level 3" || SceneName == "Level 4")
+       // {
+        //    score = score - 200;
+        //   Debug.Log("Ran Scorefix");
+       // }
 
         if (SceneName == "Level 1")
-            {
+         {
                 score = 0;
                 Debug.Log("Set score property to 0");
-            }
-            else
-            {
+         }
+        else
+         {
                 int ReceivedScore;
                 int.TryParse(DataRecorder.GetScore(), out ReceivedScore);
                 score = ReceivedScore;
-                Debug.Log("Ran set property with no level 1 ReceivedScore is" + ReceivedScore.ToString());
+
+           
+            Debug.Log("Ran set property with no level 1 ReceivedScore is" + ReceivedScore.ToString());
                 Debug.Log("score property is :" + score.ToString());
-            }
+         }
             Debug.Log("Score sent to screen is " + score.ToString());
             scoreText.text = "Score: " + score.ToString();
         Debug.Log("Start method is run");
-
-        
-        
+              
 
     }
 
@@ -108,6 +109,18 @@ public class PlayerController : Physics
 
     void Update()
     {
+        //added to correct random loss of 200 points of level 3 and level 4 
+        if(levelTime > 118)
+        {
+            if (SceneName == "Level 3" || SceneName == "Level 4")
+            {
+                int ReceivedScore;
+                int.TryParse(DataRecorder.GetScore(), out ReceivedScore);
+                score = ReceivedScore;
+                scoreText.text = "Score: " + score.ToString();
+            }
+        }
+
         ComputeVelocity();
 
         // Decrease immunity timer when damaged

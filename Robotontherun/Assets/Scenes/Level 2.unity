@@ -2196,6 +2196,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1883167565808624768, guid: 7bea52f1c1e498849895d54c407a12c1,
+        type: 3}
+      propertyPath: PauseUI
+      value: 
+      objectReference: {fileID: 1793296894}
     - target: {fileID: 1883167565808624769, guid: 7bea52f1c1e498849895d54c407a12c1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2256,11 +2261,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1809496033}
-    - target: {fileID: 1883167565808624768, guid: 7bea52f1c1e498849895d54c407a12c1,
-        type: 3}
-      propertyPath: PauseUI
-      value: 
-      objectReference: {fileID: 1793296894}
     - target: {fileID: 1883167565808624771, guid: 7bea52f1c1e498849895d54c407a12c1,
         type: 3}
       propertyPath: HeartUI
@@ -9771,7 +9771,7 @@ PrefabInstance:
     - target: {fileID: 1155979562418726998, guid: 56d9b8a5fe8a8a94f8d541da4422738e,
         type: 3}
       propertyPath: nextSceneNumber
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56d9b8a5fe8a8a94f8d541da4422738e, type: 3}

@@ -188,7 +188,7 @@ PrefabInstance:
     - target: {fileID: 1155979562418726998, guid: 56d9b8a5fe8a8a94f8d541da4422738e,
         type: 3}
       propertyPath: nextSceneNumber
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56d9b8a5fe8a8a94f8d541da4422738e, type: 3}
@@ -8658,6 +8658,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1565300764211799420, guid: e4d2f03aa86791f4f81b2b0ae4b58af5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1565300763072756824, guid: e4d2f03aa86791f4f81b2b0ae4b58af5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1565300763072756831, guid: e4d2f03aa86791f4f81b2b0ae4b58af5,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -8672,16 +8682,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1565300764211799420, guid: e4d2f03aa86791f4f81b2b0ae4b58af5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1565300763072756824, guid: e4d2f03aa86791f4f81b2b0ae4b58af5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4d2f03aa86791f4f81b2b0ae4b58af5, type: 3}
@@ -11431,6 +11431,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 1883167565808624768, guid: 7bea52f1c1e498849895d54c407a12c1,
+        type: 3}
+      propertyPath: PauseUI
+      value: 
+      objectReference: {fileID: 954872577}
     - target: {fileID: 1883167565808624769, guid: 7bea52f1c1e498849895d54c407a12c1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11491,11 +11496,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2125968951}
-    - target: {fileID: 1883167565808624768, guid: 7bea52f1c1e498849895d54c407a12c1,
-        type: 3}
-      propertyPath: PauseUI
-      value: 
-      objectReference: {fileID: 954872577}
     - target: {fileID: 1883167565808624771, guid: 7bea52f1c1e498849895d54c407a12c1,
         type: 3}
       propertyPath: HeartUI

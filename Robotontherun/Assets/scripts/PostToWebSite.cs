@@ -9,10 +9,7 @@ public class PostToWebSite : MonoBehaviour
     void Start()
     {
          StartCoroutine(Upload());
-
         
-
-
     }
 
     IEnumerator Upload()
@@ -33,8 +30,7 @@ public class PostToWebSite : MonoBehaviour
         if (www.isNetworkError || www.isHttpError)
         {
             Debug.Log(www.error);
-            
-           
+                
         }
         else
         {
