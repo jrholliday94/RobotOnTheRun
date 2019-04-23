@@ -19,7 +19,7 @@ public class Highscoreapicontroller : MonoBehaviour
     IEnumerator GetBoard()
     {
         var gethighscores = UnityWebRequest.Get("http://cis174-bfrederickson-website.azurewebsites.net/API/v1/highscores/get");
-        yield return gethighscores;
+        yield return gethighscores.SendWebRequest();
 
         if(gethighscores.isNetworkError || gethighscores.isHttpError )
         {

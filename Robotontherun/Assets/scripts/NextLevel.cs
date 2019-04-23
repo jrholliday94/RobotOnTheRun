@@ -8,10 +8,25 @@ public class NextLevel : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        PlayerController data = (PlayerController) collision.gameObject.GetComponent("PlayerController");
-        data.RecordScoreOnExit();
-       
-        SceneManager.LoadScene(nextSceneNumber);
+        var currentscene = SceneManager.GetActiveScene();
+       string SceneName = currentscene.name;
+        if (SceneName == "Level 4")
+        {
+            PlayerController data = (PlayerController)collision.gameObject.GetComponent("PlayerController");
+            data.RecordScoreOnExit();
+            //add post commands here
+            SceneManager.LoadScene("LeaderBoard");
+        }
+        else
+        {
+            PlayerController data = (PlayerController)collision.gameObject.GetComponent("PlayerController");
+            data.RecordScoreOnExit();
+            SceneManager.LoadScene(nextSceneNumber);
+
+        }
+
+
+
     }
 
 }
