@@ -13,10 +13,13 @@ public class HealItem : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (playerScript.currentHealth < playerScript.maxHealth)
+        if(collision.tag == "Player")
         {
-            playerScript.TakeHeal();
-            Destroy(this.gameObject);
+            if (playerScript.currentHealth < playerScript.maxHealth)
+            {
+                playerScript.TakeHeal();
+                Destroy(this.gameObject);
+            }
         }
     }
 }

@@ -12,7 +12,7 @@ public class HighScoreViewModel : MonoBehaviour
     public string Email { get; set; }
     public decimal Score { get; set; }
     public string stringscore => Score.ToString();
-    public DateTime DateTime { get; set; }
-    public string stringdatetime => DateTime.ToString();
+    public DateTime DateAttained { get; set; }
+    public string stringdatetime => DateAttained.ToString();
         
 }

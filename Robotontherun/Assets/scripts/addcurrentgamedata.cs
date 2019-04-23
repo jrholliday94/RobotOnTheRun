@@ -1,6 +1,5 @@
 ﻿using filewriter;
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +8,7 @@ public class addcurrentgamedata : MonoBehaviour
 
     public Text email;
     public Text score;
+    public Text date;
 
 
     private void Start()
@@ -17,6 +17,7 @@ public class addcurrentgamedata : MonoBehaviour
 
         email.text =  DataHandler.GetUserName();
         score.text = DataHandler.GetScore();
+        date.text = DateTime.Now.ToString("MM/dd/yyyy h:mm:ss tt");
 
     }
 

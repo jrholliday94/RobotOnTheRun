@@ -1,7 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -27,22 +26,22 @@ public class Highscoreapicontroller : MonoBehaviour
         }
         else
         {
-            Debug.Log(gethighscores.responseCode);
+            //Debug.Log(gethighscores.responseCode);
             var JsonResult = gethighscores.downloadHandler.text;
             
             var highScore = JsonConvert.DeserializeObject<List<HighScoreViewModel>>(JsonResult);
 
+            int i = 1;
             foreach (var score in highScore)
             {
+
                 var row = GameObject.Instantiate(RowPrefab, Panel.transform);
                 row.GetComponent<RowController>().SetAllFields(
 
-                    score.stringhighscoreid,
-                    score.stringpersonid,
-                    score.Email,
+                    i + ". " + score.Email,
                     score.stringscore,
-                    score.stringdatetime);      
-                    
+                    score.stringdatetime);
+                    i++;
             }
         }
 

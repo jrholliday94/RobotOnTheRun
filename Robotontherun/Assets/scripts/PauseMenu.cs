@@ -1,23 +1,24 @@
 ﻿using filewriter;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
     public GameObject PauseUI;
+    public GameObject LeaderboardUI;
 
     private bool paused = false;
+    private bool leaderBoardUp = false;
 
     void Start()
     {
         PauseUI.SetActive(false);
+        LeaderboardUI.SetActive(false);
     }
 
     void Update()
     {
-        if(Input.GetButtonDown("Pause"))
+        if(Input.GetButtonDown("Pause") && leaderBoardUp == false)
         {
             paused = !paused;
         }
@@ -61,5 +62,19 @@ public class PauseMenu : MonoBehaviour
 
         //quits game
         Application.Quit();
+    }
+
+    public void ShowLeaderUI()
+    {
+        PauseUI.SetActive(false);
+        leaderBoardUp = true;
+        LeaderboardUI.SetActive(true);
+    }
+
+    public void HideLeaderUI()
+    {
+        PauseUI.SetActive(true);
+        leaderBoardUp = false;
+        LeaderboardUI.SetActive(false);
     }
 }

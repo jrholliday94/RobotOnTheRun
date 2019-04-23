@@ -160,7 +160,6 @@ public class PlayerController : Physics
             Die();
         }
         */
-        Debug.Log(score.ToString());
     }
 
     protected override void ComputeVelocity()

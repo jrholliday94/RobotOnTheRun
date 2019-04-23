@@ -2287,6 +2287,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4d2f03aa86791f4f81b2b0ae4b58af5, type: 3}
+--- !u!1 &447027090 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2186543945570619853, guid: dd8a5c6e030c60548bf60ffa3eac91bc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2668866608125062012}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &459260014
 GameObject:
   m_ObjectHideFlags: 0
@@ -11436,6 +11442,11 @@ PrefabInstance:
       propertyPath: PauseUI
       value: 
       objectReference: {fileID: 954872577}
+    - target: {fileID: 1883167565808624768, guid: 7bea52f1c1e498849895d54c407a12c1,
+        type: 3}
+      propertyPath: LeaderboardUI
+      value: 
+      objectReference: {fileID: 447027090}
     - target: {fileID: 1883167565808624769, guid: 7bea52f1c1e498849895d54c407a12c1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11738,6 +11749,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RenderMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1004427367022006940, guid: dd8a5c6e030c60548bf60ffa3eac91bc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 57535011}
+    - target: {fileID: 1004427367022006940, guid: dd8a5c6e030c60548bf60ffa3eac91bc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowLeaderUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 2186543945570619853, guid: dd8a5c6e030c60548bf60ffa3eac91bc,
+        type: 3}
+      propertyPath: m_Name
+      value: LeaderboardUI
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd8a5c6e030c60548bf60ffa3eac91bc, type: 3}
