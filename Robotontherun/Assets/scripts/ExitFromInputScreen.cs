@@ -3,16 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Exit_Game : MonoBehaviour
+public class ExitFromInputScreen : MonoBehaviour
 {
-   public void ExitGame()
+         
+    public void ExitWithoutAction()
     {
         //removes data files from user comptuer
         ScoreNameToFile DataRecorder = new ScoreNameToFile();
         DataRecorder.DeletefileScore();
         DataRecorder.DeleteUserFile();
 
-        //quits game
+        //quits program
         Application.Quit();
+        
     }
 }

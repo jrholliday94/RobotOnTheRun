@@ -694,6 +694,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2186543945570619853, guid: dd8a5c6e030c60548bf60ffa3eac91bc,
+        type: 3}
+      propertyPath: m_Name
+      value: LeaderboardUI
+      objectReference: {fileID: 0}
     - target: {fileID: 2668866607357017555, guid: dd8a5c6e030c60548bf60ffa3eac91bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -864,6 +869,16 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1054989515}
+    - target: {fileID: 1004427367022006940, guid: dd8a5c6e030c60548bf60ffa3eac91bc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 821351151}
+    - target: {fileID: 1004427367022006940, guid: dd8a5c6e030c60548bf60ffa3eac91bc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowLeaderUI
+      objectReference: {fileID: 0}
     - target: {fileID: 2668866607357017553, guid: dd8a5c6e030c60548bf60ffa3eac91bc,
         type: 3}
       propertyPath: m_ReferencePixelsPerUnit
@@ -874,8 +889,24 @@ PrefabInstance:
       propertyPath: m_DynamicPixelsPerUnit
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6564103181772224145, guid: dd8a5c6e030c60548bf60ffa3eac91bc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 821351151}
+    - target: {fileID: 6564103181772224145, guid: dd8a5c6e030c60548bf60ffa3eac91bc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HideLeaderUI
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd8a5c6e030c60548bf60ffa3eac91bc, type: 3}
+--- !u!1 &181241576 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2186543945570619853, guid: dd8a5c6e030c60548bf60ffa3eac91bc,
+    type: 3}
+  m_PrefabInstance: {fileID: 181241575}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &213141077
 GameObject:
   m_ObjectHideFlags: 0
@@ -2196,6 +2227,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1883167565808624768, guid: 7bea52f1c1e498849895d54c407a12c1,
+        type: 3}
+      propertyPath: PauseUI
+      value: 
+      objectReference: {fileID: 1793296894}
+    - target: {fileID: 1883167565808624768, guid: 7bea52f1c1e498849895d54c407a12c1,
+        type: 3}
+      propertyPath: LeaderboardUI
+      value: 
+      objectReference: {fileID: 181241576}
     - target: {fileID: 1883167565808624769, guid: 7bea52f1c1e498849895d54c407a12c1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2256,11 +2297,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1809496033}
-    - target: {fileID: 1883167565808624768, guid: 7bea52f1c1e498849895d54c407a12c1,
-        type: 3}
-      propertyPath: PauseUI
-      value: 
-      objectReference: {fileID: 1793296894}
     - target: {fileID: 1883167565808624771, guid: 7bea52f1c1e498849895d54c407a12c1,
         type: 3}
       propertyPath: HeartUI
@@ -9771,7 +9807,7 @@ PrefabInstance:
     - target: {fileID: 1155979562418726998, guid: 56d9b8a5fe8a8a94f8d541da4422738e,
         type: 3}
       propertyPath: nextSceneNumber
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56d9b8a5fe8a8a94f8d541da4422738e, type: 3}
