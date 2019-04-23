@@ -694,6 +694,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2186543945570619853, guid: dd8a5c6e030c60548bf60ffa3eac91bc,
+        type: 3}
+      propertyPath: m_Name
+      value: LeaderboardUI
+      objectReference: {fileID: 0}
     - target: {fileID: 2668866607357017555, guid: dd8a5c6e030c60548bf60ffa3eac91bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -864,16 +869,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1054989515}
-    - target: {fileID: 2668866607357017553, guid: dd8a5c6e030c60548bf60ffa3eac91bc,
-        type: 3}
-      propertyPath: m_ReferencePixelsPerUnit
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 2668866607357017553, guid: dd8a5c6e030c60548bf60ffa3eac91bc,
-        type: 3}
-      propertyPath: m_DynamicPixelsPerUnit
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1004427367022006940, guid: dd8a5c6e030c60548bf60ffa3eac91bc,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -884,10 +879,25 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ShowLeaderUI
       objectReference: {fileID: 0}
-    - target: {fileID: 2186543945570619853, guid: dd8a5c6e030c60548bf60ffa3eac91bc,
+    - target: {fileID: 2668866607357017553, guid: dd8a5c6e030c60548bf60ffa3eac91bc,
         type: 3}
-      propertyPath: m_Name
-      value: LeaderboardUI
+      propertyPath: m_ReferencePixelsPerUnit
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2668866607357017553, guid: dd8a5c6e030c60548bf60ffa3eac91bc,
+        type: 3}
+      propertyPath: m_DynamicPixelsPerUnit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6564103181772224145, guid: dd8a5c6e030c60548bf60ffa3eac91bc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 821351151}
+    - target: {fileID: 6564103181772224145, guid: dd8a5c6e030c60548bf60ffa3eac91bc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HideLeaderUI
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd8a5c6e030c60548bf60ffa3eac91bc, type: 3}

@@ -11595,6 +11595,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2186543945570619853, guid: dd8a5c6e030c60548bf60ffa3eac91bc,
+        type: 3}
+      propertyPath: m_Name
+      value: LeaderboardUI
+      objectReference: {fileID: 0}
     - target: {fileID: 2668866607357017555, guid: dd8a5c6e030c60548bf60ffa3eac91bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11760,10 +11765,15 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ShowLeaderUI
       objectReference: {fileID: 0}
-    - target: {fileID: 2186543945570619853, guid: dd8a5c6e030c60548bf60ffa3eac91bc,
+    - target: {fileID: 6564103181772224145, guid: dd8a5c6e030c60548bf60ffa3eac91bc,
         type: 3}
-      propertyPath: m_Name
-      value: LeaderboardUI
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 57535011}
+    - target: {fileID: 6564103181772224145, guid: dd8a5c6e030c60548bf60ffa3eac91bc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HideLeaderUI
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd8a5c6e030c60548bf60ffa3eac91bc, type: 3}
