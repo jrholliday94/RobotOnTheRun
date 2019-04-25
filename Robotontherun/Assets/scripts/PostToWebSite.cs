@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using filewriter;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -6,8 +7,6 @@ using UnityEngine.UI;
 
 public class PostToWebSite : MonoBehaviour
 {
-
-    public Text statusText;
 
     //Start is called before the first frame update
     public void Start()
@@ -23,32 +22,17 @@ public class PostToWebSite : MonoBehaviour
 
         WWWForm form = new WWWForm();
 
-        Dictionary<string, string> headers = form.headers;
-        headers["email"] = "Test2@Test.com";
-        headers["newHighscore"] = "2500";
-               
-        WWW request = new WWW("http://cis174-bfrederickson-website.azurewebsites.net/API/v1/highscores", null, headers);
 
-        UnityWebRequest www = UnityWebRequest.Post("http://cis174-bfrederickson-website.azurewebsites.net/API/v1/highscores/set?email=Default@email.com&newHighscore=2500", form);
+        ScoreNameToFile DataHandler = new ScoreNameToFile();
+
+        string email = DataHandler.GetUserName();
+        string score = DataHandler.GetScore();
+
+        string url = "http://cis174-bfrederickson-website.azurewebsites.net/API/v1/highscores/?email=" + email + "&newHighscore=" + score;
+
+        UnityWebRequest www = UnityWebRequest.Post(url, "");
         Debug.Log(www.uri + www.url);
-        yield return request;
-
-        Debug.Log("Method Run");
-
-        Debug.Log(request.text);
-
-        if (request.text.Contains("error"))
-        {
-            statusText.text += "Error uploading";
-
-        } else if(request.text.Contains("Nothing was created"))
-        {
-            statusText.text += "No highscore created";
-
-        } else if(request.text.Contains("Highscore was created"))
-        {
-            statusText.text += "New highscore!";
-        }
+        yield return www.SendWebRequest();
         
     }
 
